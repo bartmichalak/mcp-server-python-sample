@@ -1,7 +1,6 @@
 from functools import lru_cache
 
 from dotenv import find_dotenv
-from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -15,7 +14,7 @@ class Settings(BaseSettings):
     )
 
     # API SETTINGS
-    api_name: str = f"math-mcp API"
+    api_name: str = "math-mcp API"
     api_v1: str = "/api/v1"
     api_latest: str = api_v1
     paging_limit: int = 100
